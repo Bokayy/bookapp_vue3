@@ -18,19 +18,6 @@
             id="btnRight"
         ></i>
     </div>
-    <search>
-        <form action="http://www.byxnet.pro/books/search" method="get">
-            <label for="searchQuery">Search:</label>
-            <input
-                type="text"
-                id="searchQuery"
-                name="q"
-                placeholder="Anything programming related"
-                v-model="template_search_string"
-            />
-            <button type="submit">Search</button>
-        </form>
-    </search>
     <!-- <div class="search">
         <div class="wrap">
             <input @keyup="keymonitor" v-model="searchQuery" class="searchTerm" placeholder="Anything IT related?" id="test">

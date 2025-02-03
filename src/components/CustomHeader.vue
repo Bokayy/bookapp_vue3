@@ -19,29 +19,26 @@
             ></i>
         </div>
 
-        <div class="search">
-            <div class="wrap">
+        <search>
+            <form action="http://www.byxnet.pro/books/search" method="get">
+                <label for="searchQuery">Search:</label>
                 <input
+                    type="text"
+                    id="searchQuery"
+                    name="q"
+                    placeholder="Anything programming related"
                     v-model="template_searchQuery"
-                    class="searchTerm"
-                    placeholder="Look up 'dev'!"
-                    id="test"
                 />
-                <button
-                    @click="template_searchQuery"
-                    type="submit"
-                    class="searchButton"
-                >
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-        </div>
+                <button type="submit">Search</button>
+            </form>
+        </search>
     </header>
 </template>
 
 <script lang="ts">
 import { ref, onMounted } from "vue";
-import { usePaginationStore } from "../src/store/usePagination";
+import { usePaginationStore } from "../store/usePagination";
+import "../style/CustomHeader.css";
 
 export default {
     setup() {
