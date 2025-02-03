@@ -43,8 +43,8 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-class-component";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { usePaginationStore } from "./store/usePagination";
 import CustomFooter from "./components/CustomFooter.vue";
 
 export default {
@@ -64,6 +64,10 @@ export default {
                 //else was used so that decrement would not be executed
             }
         }
+
+        onMounted(() => {
+            //debugging
+        });
         return {
             template_show_pagination: show_pagination,
             template_pageOscillator: pageOscillator,

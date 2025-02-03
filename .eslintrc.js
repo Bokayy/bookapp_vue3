@@ -8,6 +8,7 @@ module.exports = {
         "eslint:recommended",
         "@vue/typescript/recommended",
         "plugin:prettier/recommended",
+        "prettier",
     ],
     parserOptions: {
         ecmaVersion: 2020,
@@ -18,6 +19,7 @@ module.exports = {
         "prettier/prettier": [
             "error",
             {
+                //singleQuote: "false",
                 endOfLine: "auto",
                 tabWidth: 4,
             },
