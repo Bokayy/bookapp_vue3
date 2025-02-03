@@ -1,41 +1,21 @@
 <template>
-    <h1>IT Books Search</h1>
-    <div class="break">&nbsp;</div>
-
-    <div v-show="template_show_pagination" class="pageIndicator">
-        <i
-            @click="template_pageOscillator(false)"
-            class="fa-solid fa-angle-left"
-            id="btnLeft"
-        >
-        </i>
-        <p class="pageNo">
-            {{ template_current_page }}/{{ template_max_pages }}
-        </p>
-        <i
-            @click="template_pageOscillator(true)"
-            class="fa-solid fa-angle-right"
-            id="btnRight"
-        ></i>
-    </div>
-    <!-- <div class="search">
-        <div class="wrap">
-            <input @keyup="keymonitor" v-model="searchQuery" class="searchTerm" placeholder="Anything IT related?" id="test">
-            <button @click="emitSearchTerm" type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-            </button>
-        </div>
-    </div>-->
+    <CustomHeader />
     <customFooter :showPagination="true" :pageNo="1" :maxPages="5" />
 </template>
 
 <script lang="ts">
 import { ref, onMounted } from "vue";
 import { usePaginationStore } from "./store/usePagination";
+import CustomHeader from "./components/CustomHeader.vue";
 import CustomFooter from "./components/CustomFooter.vue";
 
 export default {
+    components: {
+        CustomHeader,
+        CustomFooter,
+    },
     setup() {
+        const paginationStore = usePaginationStore();
         let current_page = ref<number>(0); //current page
         let search_string = ref<string>(""); //what has been or will be searched
         let max_pages = ref<number>(0); //the maximum number of pages based on query
@@ -65,20 +45,3 @@ export default {
     },
 };
 </script>
-
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-
-    .divider {
-        background-color: rgb(197, 164, 120);
-        min-width: 100%;
-        min-height: 1.5rem;
-    }
-}
-</style>
