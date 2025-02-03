@@ -1,0 +1,73 @@
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    max-height: 10rem;
+    max-width: 100%;
+    min-width:40rem;
+    h1{
+        color: rgb(197, 164, 120);
+        font-size:3.5rem;
+        font-family: "abnes"; 
+        margin-top:2rem;
+        margin-left:4rem;
+        margin-bottom: 1rem;
+        flex-basis:50%;
+    }
+    .break{
+        flex-basis:0;
+        width: 0%;
+    }
+
+    .pageIndicator{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        >p{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .fa-solid{
+            font-size:4rem;
+            cursor: pointer;
+            color:rgb(197, 164, 120);
+            font-family: FontAwesome !important;
+            font-style: normal;
+            padding:1.5rem;
+        }
+        .pageNo{
+            font-size:3rem;
+        }
+
+    }
+    .search{
+        .wrap{
+            display: inline-flex;
+        }
+
+        input{
+            border: 3px solid rgb(197, 164, 120);
+            border-top-left-radius:3px;
+            border-bottom-left-radius:3px;
+            height:4rem;
+            color: black;
+            font-size: 3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-left:1rem;
+        }
+        button{
+            border: 3px solid rgb(197, 164, 120);
+            margin-left: -0.3rem;
+            background-color: rgb(197, 164, 120);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius:3px ;
+            height: 4rem;
+            width: 4rem;
+            cursor:pointer;
+        }
+    }
+}
