@@ -38,7 +38,7 @@
 <script lang="ts">
 import { ref, onMounted } from "vue";
 import { usePaginationStore } from "../store/usePagination";
-import "../style/CustomHeader.css";
+import "../style/CustomHeader.scss";
 
 export default {
     setup() {
@@ -64,5 +64,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss" scoped></style>

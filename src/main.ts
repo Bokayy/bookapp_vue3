@@ -2,7 +2,7 @@ import { usePaginationStore } from "@/store/usePagination";
 import { createPinia } from "pinia";
 import { createApp } from "vue";
 import App from "./App.vue";
-import "./style.scss";
+import "./style/style.scss";
 
 const pinia = createPinia();
 const app = createApp(App);
