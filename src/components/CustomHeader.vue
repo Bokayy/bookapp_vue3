@@ -19,19 +19,17 @@
             ></i>
         </div>
 
-        <search>
-            <form action="http://www.byxnet.pro/books/search" method="get">
-                <label for="searchQuery">Search:</label>
-                <input
-                    type="text"
-                    id="searchQuery"
-                    name="q"
-                    placeholder="Anything programming related"
-                    v-model="template_searchQuery"
-                />
-                <button type="submit">Search</button>
-            </form>
-        </search>
+        <form action="http://www.byxnet.pro/books/search" method="get">
+            <label for="searchQuery">Search:</label>
+            <input
+                type="text"
+                id="searchQuery"
+                name="q"
+                placeholder="Anything programming related"
+                v-model="template_searchQuery"
+            />
+            <button type="submit">Search</button>
+        </form>
     </header>
 </template>
 
@@ -50,6 +48,7 @@ export default {
         });
 
         function update_searchQuery_store() {
+            console.log("update searchqueryStore");
             paginationStore.updateSearch(searchQuery.value);
         }
 

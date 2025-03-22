@@ -43,28 +43,28 @@ header{
         }
 
     }
-    .search{
-        form{
-            input{
-                border: 3px solid rgb(197, 164, 120);
-                border-top-left-radius:3px;
-                border-bottom-left-radius:3px;
-                height:4rem;
-                color: black;
-                font-size: 3rem;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                padding-left:1rem;
-            }
-            button{
-                border: 3px solid rgb(197, 164, 120);
-                margin-left: -0.3rem;
-                background-color: rgb(197, 164, 120);
-                border-top-right-radius: 3px;
-                border-bottom-right-radius:3px ;
-                height: 4rem;
-                width: 4rem;
-                cursor:pointer;
-            }
+    form{
+        box-sizing: content-box;
+        display: inline-flex;
+        input{
+            border: 3px solid rgb(197, 164, 120);
+            border-top-left-radius:3px;
+            border-bottom-left-radius:3px;
+            height:4rem;
+            color: black;
+            font-size: 3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-left:1rem;
+        }
+        button{
+            border: 3px solid rgb(197, 164, 120);
+            margin-left: -0.3rem;
+            background-color: rgb(197, 164, 120);
+            border-top-right-radius: 3px;
+            border-bottom-right-radius:3px ;
+            height: 4rem;
+            width: 4rem;
+            cursor:pointer;
         }
     }
 }
